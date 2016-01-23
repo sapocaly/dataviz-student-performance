@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Project2</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <div id='back' onclick="vanish('.stats-page');vanish('.student-page');grow('.main-page');">Main Page</div>
+                <div id='stats' onclick="vanish('.main-page');vanish('.student-page');grow('.stats-page');">Assignments</div>
+
+            </div>
+
+
+
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- /.container -->
+    </nav>
+
+
+    <div class="container">
+        <div class="student-page">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="big-score">
+                        Grade: <span class="score-num" id="overall-score">60%</span>
+                        <br/>
+                        <div class="rank" id="overall-rank">Class Average: 50% Rank:18</div>
+                        <span id='cate'>Final:</span>&nbsp;<span class="score-num" id="cate-score">70%</span>
+                        <br/>
+                        <div class="rank" id="cate-rank">Class Average: 32% Rank:23</div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div id="sunburst">
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div id="scchart">
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+        <div class="main-page">
+            <div id="bar-chart">
+            </div>
+            <div class='status-bar'><span id='name-score'>Name: <span class='fixwidth'><span id='main-name'>NaN</span></span>&nbsp;&nbsp;&nbsp;Grade: <span class='fixwidth'><span id='main-grade'>NaN</span></span>&nbsp;&nbsp;&nbsp;Rank: <span class='fixwidth'><span id='main-rank' style='color:#ffcc00'>NaN</span></span>
+                </span>
+            </div>
+            <div id="multi-chart">
+            </div>
+        </div>
+        <div class="stats-page">
+            <div id='donuts-chart'></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="sunburst.js"></script>
+</body>
+
+</html>
